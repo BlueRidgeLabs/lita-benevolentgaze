@@ -2,8 +2,14 @@ module Lita
   module Handlers
     class Who < Handler
 
-      route(/^invite <@([^>]+)>/i, :invite_kiosk)
-      route(/^who|list/i, :who)
+      route(/^invite <@([^>]+)>/i, :invite_kiosk, help:{
+        "invite"=>'send you the kiosk invite link for the user mentioned'
+      })
+
+      route(/^who|list/i, :who, help: {
+        "who" => "lists all of the people currently at 150 Court."
+      })
+      
       def invite_kiosk(response)
         response.reply_privately "Invitation link: https://office.brl.nyc/slack_me_up/#{response.matches[0][0]} "
       end

@@ -6,7 +6,7 @@ Lita.load_locales Dir[File.expand_path(
 
 require "lita/handlers/who"
 
-Lita::Handlers::Greet.template_root File.expand_path(
+Lita::Handlers::Who.template_root File.expand_path(
   File.join("..", "..", "templates"),
  __FILE__
 )
