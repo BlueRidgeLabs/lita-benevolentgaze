@@ -1,11 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "lita/benevolentgaze/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "lita-benevolentgaze"
-  spec.version       = Lita::Benevolentgaze::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Bill Cromie"]
   spec.email         = ["bill@cromie.org"]
 
